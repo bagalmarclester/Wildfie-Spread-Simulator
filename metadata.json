@@ -1,0 +1,5 @@
+{
+  "name": "Wildfire Spread Simulator",
+  "description": "Simulates fire spread over terrain using image processing to determine fuel density. Features adjustable wind, humidity, and real-time burn rate metrics.",
+  "requestFramePermissions": []
+}
