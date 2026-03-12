@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { FireSimulator, STATE_BURNT } from '../lib/simulation';
 import { Play, Pause, RotateCcw, Upload, Wind, Droplets, Flame, AlertTriangle, Layers, X, TrendingUp, TrendingDown, Activity, Map } from 'lucide-react';
+import mapImage from './map.png';
 
 const SIM_WIDTH = 500;
 const SIM_HEIGHT = 500;
@@ -81,7 +82,7 @@ export default function FireSimulation() {
     // Load default image (top-down aerial view of a city park)
     const img = new Image();
     img.crossOrigin = 'Anonymous';
-    img.src = 'https://images.unsplash.com/photo-1506702315536-dd8b83e2dcf9?q=80&w=1000&auto=format&fit=crop';
+    img.src = mapImage;
     img.onload = () => {
       if (bgCanvasRef.current && simRef.current) {
         const ctx = bgCanvasRef.current.getContext('2d');
